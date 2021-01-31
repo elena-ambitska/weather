@@ -1,7 +1,7 @@
 $("#submit").click(function () {
     let city = $("#city").val();
     $.ajax({
-        url: "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&APPID=5d066958a60d315387d9492393935c19",
+        url: "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=metric&APPID=5d066958a60d315387d9492393935c19",
         context: document.body,
         success: function (result) {
             $(this).addClass("done");
@@ -46,7 +46,7 @@ class Weather {
         weather.innerHTML = `
         
         <div class="city">${this.city}</div>
-        <div class="weather-icon"> <img src="http://openweathermap.org/img/w/${this.icon}.png"></div>
+        <div class="weather-icon"> <img src="https://openweathermap.org/img/w/${this.icon}.png"></div>
         <div class="temperature-value">
             <p>${this.temp}&deg;C</p>
         </div>
